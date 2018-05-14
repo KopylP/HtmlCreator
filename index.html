@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>creator</title>
+</head>
+<body>
+	<div id="createNew">Create new document or connect to already exist.</div>
+	<div>
+		<input type="text" placeholder="Your name" id="roomName"><br/>
+		<button id="btnCreate">Create or Join</button><br/>
+		<input type = "text" id="link">
+	</div>
+	<a href="/create?namespace=my">Create</a>
+</body>
+	<script>
+		window.onload = function()
+		{
+			console.log("i am here");
+			const btn = document.getElementById("btnCreate");
+			const link = document.getElementById("link");
+			const roomName = document.getElementById("roomName");
+			btn.onclick = function()
+			{
+
+				if(roomName.value && !roomName.value.trim().includes(" "))
+				{
+					link.value = location.protocol +'//'+ location.hostname + (location.port ? ':' +location.port: '') + "/create?namespace=" + roomName.value;
+				}
+			}
+		}
+	</script>
+</html>

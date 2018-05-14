@@ -1,0 +1,16 @@
+body
+{
+	width: 100%;
+}
+.editor
+{
+	width: 100%;
+	background: red;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.editor textarea
+{
+	flex-grow: 1;
+}

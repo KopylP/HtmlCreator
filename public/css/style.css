@@ -1,0 +1,167 @@
+body
+{
+	background-image: url(../back.jpg);
+	padding-top: 10px;
+}
+
+.editor
+{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	float: left;
+}
+
+.names
+{
+	width: 100%;
+	margin-top: 5px;
+	height: 20px;
+	float: left;
+	display: flex;
+}
+.names div
+{
+	float: left;
+	flex-grow: 1;
+	text-align: center;
+}
+.names div span
+{
+	background: #222;
+	color:white;
+	padding: 5px 30px;
+	border-radius: 10px 10px 0 0;
+}
+
+.result-name
+{
+	flex-grow: 0;
+	display: none;
+}
+.editor-block
+{
+	flex-grow: 1;
+	height: 300px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.editor iframe
+{
+	width: 100%;
+	margin: 5px;
+	border: none;
+	background: white;
+	height: 400px;
+}
+
+header
+{
+	width: 100%;
+	float: left;
+
+}
+header div
+{
+	margin-left: 5px;
+	width: 10px;
+	height: 10px;
+	background: red;
+	float: left;
+	margin-bottom: 5px;
+	border-radius: 50%;
+}
+
+#btnSave
+{
+	display: none;
+}
+
+@media screen and (max-width: 750px)
+{
+	body
+	{
+		padding-right: 5px;
+	}
+	.html-name span
+	{
+		background: #666;
+	}
+	.names
+	{
+		padding-left: 5px;
+	}
+	.editor
+	{
+		flex-direction:column;
+	}
+	.names div
+	{
+		float: left;
+		flex-grow: 0;
+	}
+	.names div span
+	{
+		background: #222;
+		color:white;
+		padding: 5px 5px;
+		border-radius: 10px 10px 0 0;
+	}
+	.result-name
+	{
+		flex-grow: 1;
+		display: block;
+		margin-left: -1px;
+	}
+	iframe
+	{
+		width: 100%;
+		margin: 0px;
+	}
+	.editor
+	{
+		position: relative;
+		height: 505px;
+	}
+	#css 
+	{
+		position: absolute;
+		width: 100%;
+		height: 500px;
+		z-index: -1;
+	}
+	#html
+	{
+		position: absolute;
+		height: 500px;
+		width: 100%;
+		z-index: 1;
+	}
+	#js
+	{
+		position: absolute;
+		width: 100%;
+		height: 500px;
+		z-index: -1;
+	}
+	#result
+	{
+		margin-top: 0px;
+		position: absolute;
+		width: 100%;
+		visibility: hidden;
+		z-index: -1;
+		height: 502px;
+		border: 0px solid red;
+	}
+	#btnSave
+	{
+		margin: 5px;
+		width: 70px;
+		height: 30px;
+		background: yellow;
+		border: 1px solid black;
+		border-radius: 4px;
+		display: block;
+	}
+}
